@@ -1,9 +1,9 @@
 package com.example.kuit.dto.response;
 
 public record LoginResponse(
-        String accessToken)
+        String accessToken, String refreshToken)
 {
-    public static LoginResponse of(String accessToken) {
-        return new LoginResponse(accessToken);
+    public static LoginResponse of(String accessToken, String refreshToken) {
+        return new LoginResponse(accessToken, refreshToken);
     }
 }
